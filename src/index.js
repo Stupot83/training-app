@@ -8,24 +8,25 @@ if (module.hot) {
 
 // Create a React component
 const App = () => {
-    const buttonText = { text: 'Click Me!' };
-    const labelText = 'Enter Name:';
-
     return (
-        <div>
-            <label className='label' htmlFor='name'>
-                {labelText}
-            </label>
-            <input id='name' type='text' />
-            <button style={{ backgroundColor: 'blue', color: 'white' }}>
-                {buttonText.text}
-            </button>
+        <div className='ui container comments'>
+            <div className='comment'>
+                <a href='/' className='avatar'>
+                <img alt="avatar" src='https://source.unsplash.com/random' />
+                </a>
+                <div className='content'>
+                    <a href='/' className='author'>
+                        Sam
+                </a>
+                    <div className='metadata'>
+                        <span className='date'>Today at 6:00PM</span>
+                    </div>
+                    <div className='text'>Nice blog post!</div>
+                </div>
+            </div>
         </div>
     )
-};
+}
 
 // Take the React component and show it on the screen
-ReactDOM.render(
-    <App />,
-    document.querySelector('#root')
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
